@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Wanderlustic
 
-## Available Scripts
+Wanderlustic is the ultimate travel booking website, providing users with everything they need to plan and book their dream vacation. With a user-friendly interface, personalized recommendations, Wanderlustic makes it easy to have the perfect travel experience.
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+https://wanderlustic.vercel.app/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**Client:** React, Chakra-UI
 
-### `npm test`
+**Server:** Node, Express, Mongoose, MongoDB
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Run Locally
 
-### `npm run build`
+Clone the project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  git clone https://github.com/pratikderepatil/wanderlustic
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Go to the project directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  cd frontend
+  cd backend
+```
 
-### `npm run eject`
+Install dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+  npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+  npm run start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Environment Variables
 
-## Learn More
+To run this project, you will need to add the following environment variables to your .env file
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`https://wanderlustic.onrender.com/user/`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
 
-### Code Splitting
+![Screenshot (854)](https://user-images.githubusercontent.com/103197193/230181153-77f31e14-5c76-43f2-bf90-5d4d8c6218f8.png)
+![Screenshot (855)](https://user-images.githubusercontent.com/103197193/230181155-50c3253c-d089-436a-8aee-c49594d29b3f.png)
+![Screenshot (856)](https://user-images.githubusercontent.com/103197193/230181133-4293dc5c-20e1-4779-b8cc-586a893838ed.png)
+![Screenshot (857)](https://user-images.githubusercontent.com/103197193/230181148-d1da9e3d-3b4d-4bf2-a635-4027a5574edd.png)
+![Screenshot (858)](https://user-images.githubusercontent.com/103197193/230181152-53d49ff9-de3e-4c0a-9a39-9b6900b80441.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Authors
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [@pratikderepatil](https://www.github.com/pratikderepatil)
