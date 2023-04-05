@@ -10,7 +10,7 @@ app.get("/", (res, req) => {
 	res.send("hello");
 });
 
-app.get("/getBookingDetails", async (req, res) => {
+app.post("/getBookingDetails", async (req, res) => {
 	const { id } = req.body;
 	console.log(id);
 	try {
