@@ -12,16 +12,18 @@ import {
   SliderThumb,
   SliderTrack,
   Text,
+  useToast,
 } from '@chakra-ui/react';
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const initState = {
-  name: '',
+  fullname: '',
   email: '',
   destination: '',
-  noOfTravellers: 1,
+  numberOfTravellers: 1,
   budget: 250,
 };
 const Registration = () => {
@@ -29,11 +31,43 @@ const Registration = () => {
   const handleInput = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
+  const toast = useToast();
   const navigate = useNavigate();
   const handleSubmit = e => {
     e.preventDefault();
     console.log(form);
-    navigate('/results');
+    axios
+      .post(
+        `${process.env.REACT_APP_API_URL}confirmBooking`,
+        { ...form },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
+      .then(response => {
+        localStorage.setItem('id', response.data);
+        toast({
+          title: 'Congratulations! Booking confirmed',
+          position: 'top',
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+        });
+        navigate('/booking-details');
+      })
+      .catch(error => {
+        toast({
+          title: 'Internal server error!',
+          description: 'Please try after sometime.',
+          position: 'top',
+          status: 'error',
+          duration: 5000,
+          isClosable: true,
+        });
+        console.log(error);
+      });
   };
   return (
     <Box>
@@ -42,7 +76,7 @@ const Registration = () => {
           <FormLabel>Enter fullname</FormLabel>
           <Input
             type="text"
-            name="name"
+            name="fullname"
             value={form.name}
             onChange={handleInput}
             placeholder="Enter name"
@@ -69,18 +103,24 @@ const Registration = () => {
           <FormLabel>Number of travellers</FormLabel>
           <HStack w="full" justifyContent={'space-between'}>
             <Button
-              isDisabled={form.noOfTravellers === 20}
+              isDisabled={form.numberOfTravellers === 20}
               onClick={() => {
-                setForm({ ...form, noOfTravellers: form.noOfTravellers + 1 });
+                setForm({
+                  ...form,
+                  numberOfTravellers: form.numberOfTravellers + 1,
+                });
               }}
             >
               +
             </Button>
-            <Text>{form.noOfTravellers}</Text>
+            <Text>{form.numberOfTravellers}</Text>
             <Button
-              isDisabled={form.noOfTravellers === 1}
+              isDisabled={form.numberOfTravellers === 1}
               onClick={() => {
-                setForm({ ...form, noOfTravellers: form.noOfTravellers - 1 });
+                setForm({
+                  ...form,
+                  numberOfTravellers: form.numberOfTravellers - 1,
+                });
               }}
             >
               -
