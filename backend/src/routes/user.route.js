@@ -6,8 +6,12 @@ const UserModel = require("../models/user.model");
 
 const app = express.Router();
 
-app.get("/:id", async (req, res) => {
-	const { id } = req.params;
+app.get("/", (res, req) => {
+	res.send("hello");
+});
+
+app.get("/getBookingDetails", async (req, res) => {
+	const { id } = req.body;
 	console.log(id);
 	try {
 		const user = await UserModel.findById(id);

@@ -18,7 +18,7 @@ const userRouter = require("./routes/user.route");
 
 mongoose.set("strictQuery", false);
 
-app.use("/travel", userRouter);
+app.use("/user", userRouter);
 
 app.get("/", (req, res) => {
 	res.send("Welcome to Wanderlustic API's");
