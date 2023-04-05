@@ -38,6 +38,15 @@ https://wanderlustic.vercel.app/
 | :-------- | :------- | :----------------------------------- |
 | `id`      | `string` | **Required**. Id of booking to fetch |
 
+## Test Cases
+
+| Test Case ID | Test Case Description | Test Steps                                                           | Expected Result                                                              |
+| ------------ | --------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 1            | Store Form Data       | 1. Submit a valid form with valid data.                              | The form data is successfully stored in the database.                        |
+|              |                       | 2. Verify that the form data is successfully stored in the database. |                                                                              |
+| 2            | Retrieve Form Data    | 1. Submit multiple forms with valid data.                            | All the previously submitted form data is retrieved and displayed correctly. |
+|              |                       | 2. Call the second endpoint to retrieve existing form submissions.   |                                                                              |
+
 ## Screenshots
 
 ![Screenshot (859)](https://user-images.githubusercontent.com/103197193/230184885-385d2ad8-b84f-4f33-9f4c-191548904640.png)
