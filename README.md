@@ -77,6 +77,34 @@ To run this project, you will need to add the following environment variables to
 
 `https://wanderlustic.onrender.com/user/`
 
+## Test Cases
+
+### Frontend
+
+| Test Case ID | Test Case Description             | Test Steps                                                                                            | Expected Result                                                                    |
+| ------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| 1            | Form Submission with Valid Data   | 1. Enter a valid name in the "Name" field.                                                            | Form data is successfully submitted and the user is redirected to the second page. |
+|              |                                   | 2. Enter a valid email address in the "Email address" field.                                          |                                                                                    |
+|              |                                   | 3. Select a valid option from the "Select Destination" dropdown.                                |                                                                                    |
+|              |                                   | 4. Enter a valid number in the "No. of travellers" field.                                             |                                                                                    |
+|              |                                   | 5. Enter a valid budget per person in the "Budget Per Person" field.                                  |                                                                                    |
+|              |                                   | 6. Click on the "Submit" button.                                                                      |                                                                                    |
+| 2            | Form Submission with Invalid Data | 1. Enter an invalid name in the "Name" field (e.g. special characters, numbers only).                 | Submit button is disabled           |
+|              |                                   | 2. Enter an invalid email address in the "Email address" field (e.g. missing '@' symbol).             |                                                                                    |
+|              |                                   | 3. Select an invalid option from the "Select Destination" dropdown.                             |                                                                                    |
+|              |                                   | 4. Enter an invalid number in the "No. of travellers" field (e.g. negative number, decimal value).    |                                                                                    |
+|              |                                   | 5. Enter an invalid budget per person in the "Budget Per Person" field (e.g. non-numeric characters). |                                                                                    |
+|              |                                   | 6. Click on the "Submit" button.                                                                      |                                                                                    |
+
+### Backend
+
+| Test Case ID | Test Case Description | Test Steps                                                           | Expected Result                                                              |
+| ------------ | --------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 1            | Store Form Data       | 1. Submit a valid form with valid data.                              | The form data is successfully stored in the database.                        |
+|              |                       | 2. Verify that the form data is successfully stored in the database. |                                                                              |
+| 2            | Retrieve Form Data    | 1. Submit multiple forms with valid data.                            | All the previously submitted form data is retrieved and displayed correctly. |
+|              |                       | 2. Call the second endpoint to retrieve existing form submissions.   |                                                                              |
+
 ## Screenshots
 
 ![Screenshot (854)](https://user-images.githubusercontent.com/103197193/230181153-77f31e14-5c76-43f2-bf90-5d4d8c6218f8.png)
