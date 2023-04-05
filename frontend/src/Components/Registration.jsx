@@ -49,9 +49,10 @@ const Registration = () => {
       )
       .then(response => {
         localStorage.setItem('id', response.data);
+        let total = form.budget * form.numberOfTravellers;
         toast({
           title: 'Congratulations! Booking confirmed',
-          description: `Your total is: ${form.budget}*${form.numberOfTravellers}`,
+          description: `Your total is: ${total}`,
           position: 'top',
           status: 'success',
           duration: 5000,
