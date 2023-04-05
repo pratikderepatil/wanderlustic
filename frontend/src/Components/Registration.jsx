@@ -4,6 +4,7 @@ import {
   FormControl,
   FormLabel,
   HStack,
+  Heading,
   Input,
   Select,
   Slider,
@@ -50,6 +51,7 @@ const Registration = () => {
         localStorage.setItem('id', response.data);
         toast({
           title: 'Congratulations! Booking confirmed',
+          description: `Your total is: ${form.budget}*${form.numberOfTravellers}`,
           position: 'top',
           status: 'success',
           duration: 5000,
@@ -70,7 +72,16 @@ const Registration = () => {
       });
   };
   return (
-    <Box>
+    <Box
+      w={['full', '70%', '50%', '40%']}
+      borderWidth="1px"
+      borderRadius="lg"
+      padding={5}
+    >
+      <Heading size={'lg'} mb="5">
+        {' '}
+        Booking Form{' '}
+      </Heading>
       <form onSubmit={handleSubmit}>
         <FormControl isRequired>
           <FormLabel>Enter fullname</FormLabel>
@@ -161,8 +172,9 @@ const Registration = () => {
             }
             colorScheme="whatsapp"
             type="submit"
+            w="full"
           >
-            Confirm
+            Confirm (Total: ${form.budget * form.numberOfTravellers})
           </Button>
         </FormControl>
       </form>
