@@ -38,6 +38,13 @@ https://wanderlustic.vercel.app/
 | :-------- | :------- | :----------------------------------- |
 | `id`      | `string` | **Required**. Id of booking to fetch |
 
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`DB_URL="mongodb+srv://wanderlustic:wanderlustic@cluster0.3cetmid.mongodb.net/"`
+`PORT=8080`
+
 ## Test Cases
 
 | Test Case ID | Test Case Description | Test Steps                                                           | Expected Result                                                              |
