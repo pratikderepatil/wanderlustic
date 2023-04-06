@@ -75,7 +75,7 @@ Start the server
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`https://wanderlustic.onrender.com/user/`
+`REACT_APP_API_URL="https://wanderlustic.onrender.com/user/"`
 
 ## Test Cases
 
