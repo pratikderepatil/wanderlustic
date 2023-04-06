@@ -4,7 +4,8 @@ Wanderlustic is the ultimate travel booking website, providing users with everyt
 
 ## Demo
 
-https://wanderlustic.vercel.app/
+Frontend Deployed link: `https://wanderlustic.vercel.app/`
+Backend Deployed link: `https://wanderlustic.onrender.com/`
 
 ## Tech Stack
 
