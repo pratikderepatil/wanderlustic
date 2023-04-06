@@ -4,7 +4,9 @@ Wanderlustic is the ultimate travel booking website, providing users with everyt
 
 ## Demo
 
-https://wanderlustic.vercel.app/
+Frontend Deployed link: https://wanderlustic.vercel.app/
+Backend Deployed link: https://wanderlustic.onrender.com/
+
 
 ## Tech Stack
 
@@ -75,7 +77,15 @@ Start the server
 
 To run this project, you will need to add the following environment variables to your .env file
 
+### Frontend
+
 `REACT_APP_API_URL="https://wanderlustic.onrender.com/user/"`
+
+### Backend
+
+`DB_URL="mongodb+srv://wanderlustic:wanderlustic@cluster0.3cetmid.mongodb.net/"`
+
+`PORT=8080`
 
 ## Test Cases
 
