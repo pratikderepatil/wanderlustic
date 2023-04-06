@@ -45,6 +45,7 @@ Backend Deployed link: `https://wanderlustic.onrender.com/`
 To run this project, you will need to add the following environment variables to your .env file
 
 `DB_URL="mongodb+srv://wanderlustic:wanderlustic@cluster0.3cetmid.mongodb.net/"`
+
 `PORT=8080`
 
 ## Test Cases
